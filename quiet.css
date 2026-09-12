@@ -1,0 +1,6 @@
+/* Only the input this extension tagged is hidden. Nothing matches on Google's
+   class names, which are obfuscated and change without notice. */
+
+input[data-gadmin-quiet="hidden"] {
+  display: none !important;
+}
