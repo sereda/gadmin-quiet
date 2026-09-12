@@ -1,6 +1,6 @@
 # Admin Console Quiet
 
-Chrome extension that stops the animated prompt examples in the Google
+Chrome extension that hides the animated prompt examples in the Google
 Workspace admin console search bar.
 
 ## Install
@@ -30,28 +30,5 @@ Two things keep it from misfiring:
 
 ## If the search box itself disappears
 
-Then the order is the other way around on your build. In `quiet.js`, change the
-tag condition from `i === 0` to `i === inputs.length - 1`.
-
-## If the animation is still there
-
-Run `probe.js` to see what is actually changing:
-
-1. Open the admin console, open DevTools, go to **Console**.
-2. Paste the contents of `probe.js` and press Return.
-3. Wait 10 seconds and copy the printed JSON.
-
-It lists the elements that changed most, with a selector path, sample text, and
-an HTML snippet.
-
-## Status
-
-Written 2026-09-12.
-
-- **0.1.0** — detected the animation by behavior instead of by selector. Did
-  not work, and overrode the `placeholder` property only, leaving
-  `setAttribute` open.
-- **0.2.0** — targeted the aria-label and locked the placeholder both ways.
-  Superseded before it was tried.
-- **0.3.0** — hides the first of the two matching inputs. One script, one rule,
-  no placeholder interception. Confirmed working on the live console.
+The order is the other way around on your build. In `quiet.js`, change the tag
+condition from `i === 0` to `i === inputs.length - 1`.

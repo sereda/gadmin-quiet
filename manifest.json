@@ -2,12 +2,18 @@
   "manifest_version": 3,
   "name": "Admin Console Quiet",
   "version": "0.3.0",
-  "description": "Hides the animated prompt-example input in the Google Workspace admin console search bar.",
+  "description": "Hides the animated prompt examples in the Google Workspace admin console search bar.",
   "content_scripts": [
     {
-      "matches": ["https://admin.google.com/*"],
-      "js": ["quiet.js"],
-      "css": ["quiet.css"],
+      "matches": [
+        "https://admin.google.com/*"
+      ],
+      "js": [
+        "quiet.js"
+      ],
+      "css": [
+        "quiet.css"
+      ],
       "run_at": "document_start",
       "all_frames": true
     }
